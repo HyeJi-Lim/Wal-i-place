@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@300;400;500;700&family=Noto+Sans&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: #fbfbfb;
+        }
+
+        .navbar{
+            width:100%;
+            height:60px;
+            background-color: #5F7161;
+        }
+
+        #logo{
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left:120px;
+            float:left;
+        }
+
+        #menu{
+            list-style: none;
+            float:right;
+            margin:0;
+            padding-right:24px;
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: 400;
+            font-size: 20px;
+        }
+
+        #menu li{
+            float:left;
+        }
+
+        #menu li a:hover{
+            color:black;
+        }
+
+        #menu li:nth-child(1){
+            margin-right:40px;
+        }
+
+        #menu li:nth-child(2){
+            margin-right:40px;
+        }
+
+        #menu li:nth-child(3){
+            margin-right:40px;
+        }
+
+        #menu li:nth-child(4){
+            margin-right:30px;
+        }
+
+        #menu li a{
+            line-height:60px;
+            text-decoration:none;
+            color: #EFEAD8;
+                }
+
+        .main-banner{
+            width:100%;
+            height:400px;
+            background-image: url('https://i.postimg.cc/J4xt8CS2/3.jpg');
+            background-size: cover;
+            background-position: right center;
+            padding-top:100px;
+        }
+
+        .navigation{
+            width:100%;
+            height:80px;
+            background-color: #5F7161;
+            text-align: center;
+        }
+
+        .navigation .menu2{
+            text-decoration: none;
+            line-height: 80px;
+            font-size: 24px;
+            color:#EFEAD8;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+        }
+
+        .navigation .menu2:not(:last-child)::after{
+            content:' ㅣ'
+         }
+
+        .navigation .menu2:hover{
+            font-weight: bold;
+        }
+
+        .info-1{
+            width:100%;
+            height:160px;
+            background-color: #9FBDA2;
+            margin-top: 80px;
+        }
+
+        .footer{
+            width:100%;
+            height:288px;
+            margin-top: 80px;
+            background-color: #26272b;
+            padding-top: 40px;
+        }
+
+        #icon1{
+            width:44px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin-right:8px;
+        }
+
+        #icon2{
+            width:44px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            /* margin-right:24px; */
+        }
+
+        h1{
+            font-family: 'Hahmlet', serif;
+            font-weight: 400;
+            text-align: center;
+            font-size:24px;
+            padding-top:40px;
+            padding-bottom: 40px;
+            line-height: 40px;
+            }
+
+        .slogan{
+            width: 488px;
+            height: 178px;
+            margin-left: 120px;
+            padding-left:12px;
+        }
+
+        .slogan .icon3{
+            float:left;
+        }
+
+        .main-banner .slogan .title-1{
+            font-size: 32px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 300;
+            color:#626262;
+            text-align: left;
+            padding-top: 48px;
+        }
+
+        .main-banner .slogan .title-2{
+            font-size: 48px;
+            font-family: 'Hahmlet', serif;
+            font-weight: 500;
+            color:#303030;
+            text-align: left;
+        }
+
+        .info1 .small{
+            font-size:16px;
+            font-family: 'Hahmlet', serif;
+            font-weight: 300;
+            text-align: center;
+            padding-bottom: 42px;  
+        }
+
+        .info1{
+            text-align: center;
+            font-family: 'Hahmlet', serif;
+            font-weight: 400;
+            font-size:24px;
+            padding-top:42px;
+            line-height: 40px;
+        }
+
+        .container{
+            width:996px;
+            height:1200px;
+            margin-top:80px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container .box1{
+            width:332px;
+            height: 400px;
+            background-image: url('https://i.postimg.cc/Y9X5wGPX/1.jpg');
+            background-size: cover;
+            float: left;
+            text-align: center;
+        }
+
+        .container .box2{
+            width:332px;
+            height: 400px;
+            background-image: url('https://i.postimg.cc/Bnc9wJrt/2.jpg');
+            background-size: cover;
+            float: left;
+            text-align: center;
+        }
+
+        .container .box3{
+            width:332px;
+            height: 400px;
+            background-image: url('https://i.postimg.cc/PqvyqLN3/3.jpg');
+            background-size: cover;
+            float: left;
+            text-align: center;
+        }
+
+        .container .box4{
+            width:332px;
+            height: 400px;
+            background-image: url('https://i.postimg.cc/XqM3GyVs/4.jpg');
+            background-size: cover;
+            float: left;
+            text-align: center;
+        }
+
+        .container .box5{
+            width:332px;
+            height: 400px;
+            background-image: url('https://i.postimg.cc/K84ptxmd/5.jpg');
+            background-size: cover;
+            float: left;
+            text-align: center;
+        }
+
+        .container .box6{
+            width:332px;
+            height: 400px;
+            background-image: url('https://i.postimg.cc/XqM3GyVs/4.jpg');
+            background-size: cover;
+            float: left;
+            text-align: center;
+        }
+
+        .container .explain{
+            float: left;
+            width: 490px;
+            height: 400px;
+            background-color: #5B6D5B;
+        }
+
+        .container .video{
+            float: left;
+            width:506px;
+            height: 400px;
+        }
+
+        .Go{
+            text-decoration: none;
+            border: 3px solid white;
+            font-size: 20px;
+            padding-left: 32px;
+            padding-right: 32px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-top: 310px;
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: 700;
+            color:white;
+            background-color: rgba(255, 255, 255, 0.25);
+            border-radius: 20px;
+        }
+
+        .Go:hover{
+            background-color: rgba(0, 0, 0, 0.5);
+            box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+        }
+
+        h1{
+            font-size:28px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+            text-align: center;
+            margin-top: 64px;
+            padding: 0;
+            color:white;
+        }
+
+        .line{
+            width: 342px;
+            height:0.5px;
+            background-color: white;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 40px;
+        }
+
+        .ex{
+            font-size: 16px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 300;
+            text-align: center;
+            line-height: 40px;
+            margin-top: 32px;
+            color:#F1F1F1;
+        }
+
+        .box-ex1{
+            width:78px;
+            height:24px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 250px;
+            margin-top:36px;
+         }
+
+        .box-ex2{
+            width:122px;
+            height:24px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 250px;
+            margin-top:36px;
+         }
+
+        .box-ex3{
+            width:100px;
+            height:24px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 250px;
+            margin-top:36px;
+         }
+
+        .check{
+            float: left;
+            margin-right:8px;
+            margin-top:8px;
+        }
+
+        .list{
+            font-size:24px;
+            font-family: 'Hahmlet', serif;
+            font-weight: 700;
+            color:white;
+        }
+
+        .footer-box1{
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .footer-box1 a{
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 700;
+            text-decoration: none;
+            color:white;
+            font-size: 16px;
+        }
+
+        .footer-box1 a:not(:last-child)::after{
+            content:' ㅣ'
+        }
+
+        .footer-content{
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+            text-align: center;
+            color:rgb(214, 214, 214);
+            font-size: 14px;
+            line-height: 30px;
+        }
+
+        .footer-content2{
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+            text-align: center;
+            color:rgb(214, 214, 214);
+            font-size: 14px;
+            margin-top: 48px;
+        }
+
+        @media(min-width:573px) and (max-width:768px){
+            .container{
+                width: 664px;
+                height: 2000px;
+            }
+
+            .container .explain{
+                width:664px;
+            }
+
+            .container iframe{
+                width:664px;
+            }
+
+            #menu{
+                font-size:15px;
+            }
+
+            #menu li:nth-child(1){
+            margin-right:20px;
+            }
+
+            #menu li:nth-child(2){
+            margin-right:20px;
+            }
+
+            #menu li:nth-child(3){
+            margin-right:20px;
+            }
+
+            #menu li:nth-child(4){
+            margin-right:15px;
+            }
+
+            #icon1{
+                width:28px;
+                margin-top: 8px;
+            }
+
+            #icon2{
+                width:28px;
+                margin-top: 8px;
+            }
+
+            #logo img{
+                width:187px;
+            }
+
+            #logo{
+                padding-left: 40px;
+                padding-top: 12px;
+            }
+
+            .navigation .menu2{
+                font-size:16px;
+            }
+
+            .slogan{
+            width: 400px;
+            height: 140px;
+            margin-left: 60px;
+            padding-left:6px;
+            }
+            
+            .main-banner .slogan .title-1{
+            font-size: 24px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 300;
+            color:#626262;
+            text-align: left;
+            padding-top: 48px;
+            }
+
+            .main-banner .slogan .title-2{
+            font-size: 32px;
+            font-family: 'Hahmlet', serif;
+            font-weight: 500;
+            color:#303030;
+            text-align: left;
+            }
+
+            .icon3{
+                width: 32px;
+            }
+
+            .main-banner{
+            width:100%;
+            height:400px;
+            background-image: url('https://i.postimg.cc/J4xt8CS2/3.jpg');
+            background-size: cover;
+            background-position: center;
+            padding-top:100px;
+        }
+            
+        }
+
+
+        </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a id="logo" href="#">
+            <img src="https://i.postimg.cc/VkGycthK/image.png" alt="logo" width="237px">
+    </a>
+
+        <ul id="menu">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">APP</a></li>
+            <li><a href="#">LOGIN</a></li>
+            <li><a href="#">MY PAGE</a></li>
+            <li><a href="#"><img id="icon1" src="https://i.postimg.cc/TwYKsHtH/1-b.png" alt="icon1" width="44px"></a></li>
+            <li><a href="#"><img id="icon2" src="https://i.postimg.cc/YC6jCwVs/2-b.png" alt="icon1" width="44px"></a></li>
+        </ul>
+
+    </div>
+
+    <div class="main-banner">
+        <div class="slogan">
+        <img class="icon3" src="https://i.postimg.cc/1ty52WJQ/image.png" width="48px">
+        <p class="title-1">나다운 일상을 위한 멍상</p>
+        <p class="title-2">왈이의 마음단련장</p>
+    </div>
+</div>
+
+    <div class="navigation">
+        <a class="menu2" href="index.html">소개&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a class="menu2" href="Lecture.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>강좌</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a class="menu2" href="Music.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;명상음악&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a class="menu2" href="Membership.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;멤버십</a>
+    </div>
+
+    <div class="info-1">
+        <p class="info1"><b>강좌</b><br>
+            <span class="small">건강하고 나다운 일상, 왈이네와 함께 만들어요.</span></p>
+      </div>
+
+      <div class="container">
+
+        <div class="box1">
+            <div class="box-ex1">
+              <img class="check" src="https://i.postimg.cc/CLRkVR5z/check-mark.png" width="24px">
+              <p class="list">집중</p>
+            </div>
+            <a href="https://youtu.be/o1D_4yAvloo" class="Go">GO</a>
+        </div>
+        <div class="box2">
+            <div class="box-ex2">
+                <img class="check" src="https://i.postimg.cc/CLRkVR5z/check-mark.png" width="24px">
+                <p class="list">생각쉬기</p>
+              </div>
+            <a href="https://youtu.be/cvPS_25gRPs" class="Go">GO</a>
+        </div>
+        <div class="box3">
+            <div class="box-ex3">
+                <img class="check" src="https://i.postimg.cc/CLRkVR5z/check-mark.png" width="24px">
+                <p class="list">힘빼기</p>
+              </div>
+            <a href="https://youtu.be/e41dka80qo0" class="Go">GO</a>
+        </div>
+        <div class="box4">
+            <div class="box-ex1">
+                <img class="check" src="https://i.postimg.cc/CLRkVR5z/check-mark.png" width="24px">
+                <p class="list">감사</p>
+              </div>
+            <a href="https://youtu.be/F1ZiAaQl6IU" class="Go">GO</a>
+        </div>
+        <div class="box5">
+            <div class="box-ex3">
+                <img class="check" src="https://i.postimg.cc/CLRkVR5z/check-mark.png" width="24px">
+                <p class="list">말풍선</p>
+              </div>
+            <a href="https://youtu.be/d18nZoSHNHc" class="Go">GO</a>
+        </div>
+        <div class="box6">
+            <div class="box-ex1">
+                <img class="check" src="https://i.postimg.cc/CLRkVR5z/check-mark.png" width="24px">
+                <p class="list">공감</p>
+              </div>
+            <a href="https://youtu.be/DB9JEy7s2oY" class="Go">GO</a>
+        </div>
+
+        <div class="explain">
+            <h1>잠시 눈 감고 <b>쉬어가세요</b></h1>
+            <div class="line"></div>
+            <p class="ex">명상은 운동이라, 1시간 강의 듣기보다 몇분이라도<br> 직접 해보는 게 효과적이에요.<br> 
+                처음이라도 괜찮아요.<br> 
+                앉은 곳에서 살포시 눈만 감아보세요.</p>
+        </div>
+
+        <div class="video">
+            <iframe width="506" height="400" src="https://www.youtube.com/embed/xOxMdJS08S0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        
+      </div>
+
+      <div class="footer">
+        <div class="footer-box1">
+        <a href="#">이용약관</a>
+        <a href="#">운영 및 환불정책</a>
+        <a href="#">개인정보 처리방침</a>
+    </div>
+    <p class="footer-content">
+        (주)왈 ㅣ 대표이사 노영은<br>
+        사업자 등록번호: 735-81-00992<br>
+        통신판매 신고번호:2018-서울종로-1426<br>
+        주소: 서울시 서대문구 성산로 11길 39
+    </p>
+    <p class="footer-content2">제휴 및 제안 문의: hello@wal.am</p>
+    </div>
+    
+    
+</body>
+</html>

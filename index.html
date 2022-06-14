@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@300;400;500;700&family=Noto+Sans&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: #fbfbfb;
+        }
+
+        .navbar{
+            width:100%;
+            height:60px;
+            background-color: #5F7161;
+        }
+
+        #logo{
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left:120px;
+            float:left;
+        }
+
+        #menu{
+            list-style: none;
+            float:right;
+            margin:0;
+            padding-right:24px;
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: 400;
+            font-size: 20px;
+        }
+
+        #menu li{
+            float:left;
+        }
+
+        #menu li:nth-child(1){
+            margin-right:40px;
+        }
+
+        #menu li:nth-child(2){
+            margin-right:40px;
+        }
+
+        #menu li:nth-child(3){
+            margin-right:40px;
+        }
+
+        #menu li:nth-child(4){
+            margin-right:30px;
+        }
+
+        #menu li a{
+            line-height:60px;
+            text-decoration:none;
+            color: #EFEAD8;
+                }
+
+        #menu li a:hover{
+            color:black;
+        }
+
+        .main-banner{
+            width:100%;
+            height:400px;
+            background-color:#B8D8F1 ;
+            background-image: url('https://i.postimg.cc/J4xt8CS2/3.jpg');
+            background-size: cover;
+            background-position: right center;
+            padding-top:100px;
+        }
+
+        .navigation{
+            width:100%;
+            height:80px;
+            background-color: #5F7161;
+            text-align: center;
+        }
+
+        .navigation .menu2{
+            text-decoration: none;
+            line-height: 80px;
+            font-size: 24px;
+            color:#EFEAD8;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+        }
+
+        .navigation .menu2:not(:last-child)::after{
+            content:' ㅣ'
+         }
+
+        .navigation .menu2:hover{
+            font-weight: bold;
+        }
+
+        .info-1{
+            width:100%;
+            height:160px;
+            background-color: #9FBDA2;
+            margin-top: 80px;
+        }
+
+        .content-1{
+            width: :100%;
+            height:970px;
+        }
+
+        #ex{
+            width: 996px;
+            height:650px;
+            margin-top: 80px;
+            margin-bottom: 80px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .col{
+            float:left;
+        }
+
+        .box1{
+            width:590px;
+            height: 350px;
+            margin-bottom: 20px;
+            background-color: #EFEAD8;
+            border-radius: 50px;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+        }
+
+        .box2{
+            width:590px;
+            height: 280px;
+            background-color: #EFEAD8;
+            border-radius: 50px;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+        }
+
+        .box3{
+            width:386px;
+            height: 100%;
+            margin-left: 610px;
+            background-color: #EFEAD8;
+            border-radius: 50px;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+        }
+
+        .info-2{
+            width:100%;
+            height:160px;
+            background-color: #9FBDA2;
+            margin-bottom: 80px;
+        }
+
+        #ex2{
+            width:996px;
+            height: 250px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .col2{
+            float: left;
+        }
+
+        .box4{
+            width:249px;
+            height:250px;
+            /* border-left: 1px solid #777777; */
+        }
+        
+        .box5{
+            width:249px;
+            height:250px;
+            border-left: 1px solid rgba(181, 180, 180, 0.701);
+        }
+
+        .box6{
+            width:249px;
+            height:250px;
+            border-left: 1px solid rgba(181, 180, 180, 0.701);
+        }
+
+        .box7{
+            width:249px;
+        }
+
+        .footer{
+            width:100%;
+            height:288px;
+            margin-top: 80px;
+            background-color: #26272b;
+            padding-top: 40px;
+        }
+
+        #icon1{
+            width:44px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin-right:8px;
+        }
+
+        #icon2{
+            width:44px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            /* margin-right:24px; */
+        }
+
+        h1{
+            font-family: 'Hahmlet', serif;
+            font-weight: 400;
+            text-align: center;
+            font-size:24px;
+            padding-top:40px;
+            padding-bottom: 40px;
+            line-height: 40px;
+            }
+
+        h2{
+            text-align: center;
+            padding-top: 24px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight:700;
+            font-size: 24px;
+            color:#5F7161;
+        } 
+        
+        .one{
+            text-align: left;
+            margin-top:44px;
+            font-size:16px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+            padding-left:19px;
+            line-height: 25px;
+            color:#6D8B74;
+        }
+
+        .two{
+            text-align: left;
+            margin-top:24px;
+            font-size: 16px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight:400;
+            padding-left:19px;
+            line-height: 35px;
+            color:#6D8B74;
+        }
+
+        .ex-bx{
+            width:315px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 28px;
+            line-height: 25px;
+            color:#6D8B74;
+        }
+
+        .ex-bx .list{
+            font-size:18px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight:500;
+        }
+
+        .ex-bx .explain{
+            font-size:16px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight:400;
+        }
+
+        #Q2{
+            margin-bottom: 44px;
+        }
+
+        .info2 .small{
+            font-size:16px;
+            font-family: 'Hahmlet', serif;
+            font-weight: 300;
+            text-align: center;
+            padding-bottom: 42px;  
+        }
+
+        .info2{
+            text-align: center;
+            font-family: 'Hahmlet', serif;
+            font-weight: 400;
+            font-size:24px;
+            padding-top:42px;
+            line-height: 40px;
+        }
+
+        .first{
+            width:190px;
+            font-size: 20px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 700;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            padding-top: 28px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e47851;
+            color:#e47851;
+        }
+
+        .second{
+            width:190px;
+            font-size: 20px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 700;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            padding-top: 28px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e47851;
+            color:#e47851;
+        }
+
+        .third{
+            width:190px;
+            font-size: 20px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 700;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            padding-top: 28px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e47851;
+            color:#e47851;
+        }
+
+        .ex2-ex{
+            width:187px;
+            font-size: 14px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: justify;
+            margin-top: 16px;
+            line-height: 25px;
+            color:gray;
+        }
+
+        .wal-i{
+            height: 250px;
+        }
+
+        .slogan{
+            width: 488px;
+            height: 178px;
+            margin-left: 120px;
+            padding-left:12px;
+        }
+
+        .slogan .icon3{
+            float:left;
+        }
+
+        .main-banner .slogan .title-1{
+            font-size: 32px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 300;
+            color:#626262;
+            text-align: left;
+            padding-top: 48px;
+        }
+
+        .main-banner .slogan .title-2{
+            font-size: 48px;
+            font-family: 'Hahmlet', serif;
+            font-weight: 500;
+            color:#303030;
+            text-align: left;
+        }
+
+        .footer-box1{
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .footer-box1 a{
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 700;
+            text-decoration: none;
+            color:white;
+            font-size: 16px;
+        }
+
+        .footer-box1 a:not(:last-child)::after{
+            content:' ㅣ'
+        }
+
+        .footer-content{
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+            text-align: center;
+            color:rgb(214, 214, 214);
+            font-size: 14px;
+            line-height: 30px;
+        }
+
+        .footer-content2{
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+            text-align: center;
+            color:rgb(214, 214, 214);
+            font-size: 14px;
+            margin-top: 48px;
+        }
+
+        @media(min-width:573px) and (max-width:768px){
+            #menu{
+                font-size:15px;
+            }
+
+            #menu li:nth-child(1){
+            margin-right:20px;
+            }
+
+            #menu li:nth-child(2){
+            margin-right:20px;
+            }
+
+            #menu li:nth-child(3){
+            margin-right:20px;
+            }
+
+            #menu li:nth-child(4){
+            margin-right:15px;
+            }
+
+            #icon1{
+                width:28px;
+                margin-top: 8px;
+            }
+
+            #icon2{
+                width:28px;
+                margin-top: 8px;
+            }
+
+            #logo img{
+                width:187px;
+            }
+
+            #logo{
+                padding-left: 40px;
+                padding-top: 12px;
+            }
+
+            .navigation .menu2{
+                font-size:16px;
+            }
+
+            .slogan{
+            width: 400px;
+            height: 140px;
+            margin-left: 60px;
+            padding-left:6px;
+            }
+            
+            .main-banner .slogan .title-1{
+            font-size: 24px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 300;
+            color:#626262;
+            text-align: left;
+            padding-top: 48px;
+            }
+
+            .main-banner .slogan .title-2{
+            font-size: 32px;
+            font-family: 'Hahmlet', serif;
+            font-weight: 500;
+            color:#303030;
+            text-align: left;
+            }
+
+            .icon3{
+                width: 32px;
+            }
+
+            .main-banner{
+            width:100%;
+            height:400px;
+            background-image: url('https://i.postimg.cc/J4xt8CS2/3.jpg');
+            background-size: cover;
+            background-position: center;
+            padding-top:100px;
+        }
+
+        #ex2{
+            width:498px;
+            height: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .box6{
+            width:249px;
+            height:250px;
+            border-left: none;
+        }
+
+        .box7{
+            width:249px;
+            border-left: 1px solid rgba(181, 180, 180, 0.701);
+        }
+        
+        }
+       
+
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a id="logo" href="#">
+            <img src="https://i.postimg.cc/VkGycthK/image.png" alt="logo" width="237px">
+    </a>
+
+        <ul id="menu">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">APP</a></li>
+            <li><a href="#">LOGIN</a></li>
+            <li><a href="#">MY PAGE</a></li>
+            <li><a href="#"><img id="icon1" src="https://i.postimg.cc/TwYKsHtH/1-b.png" alt="icon1" width="44px"></a></li>
+            <li><a href="#"><img id="icon2" src="https://i.postimg.cc/YC6jCwVs/2-b.png" alt="icon1" width="44px"></a></li>
+        </ul>
+
+    </div>
+
+    <div class="main-banner">
+        <div class="slogan">
+        <img class="icon3" src="https://i.postimg.cc/1ty52WJQ/image.png" width="48px">
+        <p class="title-1">나다운 일상을 위한 멍상</p>
+        <p class="title-2">왈이의 마음단련장</p>
+    </div>
+</div>
+
+    <div class="navigation">
+        <a class="menu2" href="index.html"><B>소개&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</B></a>
+        <a class="menu2" href="Lecture.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;강좌&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a class="menu2" href="Music.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;명상음악&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a class="menu2" href="Membership.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;멤버십</a>
+    </div>
+    
+    <div class="content-1">
+      <div class="info-1">
+        <h1>어떻게 명상으로
+            <br><b>마음이 튼튼해질 수 있을까요?</b></h1>
+      </div>
+       <div id="ex">
+         <div class="box1 col">
+            <h2>Q.명상이 무엇인가요?</h2>
+            <p class="one">명상은 생각을 없애는 연습도, 긍정적으로 생각을 바꾸는 연습도 아닙니다.<br><br>
+
+                명상은 생각과 욕구를 내려놓고 머리를 쉬게 하는 기술입니다.<Br>
+                마음챙김은 지금 이 순간 마음에서 일어나는 일을 있는 그대로 바라보는 훈련입니다.<br>
+                이 두 가지, 마음챙김과 명상을 함께 하는 것을 마음챙김 명상이라고 합니다.<br><br>
+                
+                왈이의 마음단련장에서는 명상과 마음챙김을 따로, 또 같이 배웁니다.<br>
+                마음챙김으로 마음이 어떻게 작동하는지 익히고, 명상으로 몸과 마음을 쉬게 하세요.</p>
+         </div>
+         <div class="box2 col">
+            <h2>Q.어떤 종류의 명상을 하나요?</h2>
+            <p class="two">
+                <b>✔감사</b> - 고마움을 느끼는 대상에 대해 찾아 마음을 전해보는 감사 저널링<Br>
+                <b>✔말풍선</b> - 나에게 필요한 말을 찾아 풍선처럼 띄워보는 나에게 필요한 말<br>
+                <b>✔생각쉬기</b> - 쉼없이 이어지는 생각을 쉬어가는 생각은 막다른 길<Br>
+                <b>✔집중</b> - 달아나는 주의를 집으로 불러들이는 원 그리며 집 짓기<br>
+                <b>✔힘빼기</b> - 볕을 상상하며 긴장을 풀어내는 햇볕 샤워<Br>
+             </p>
+         </div>
+         <div class="box3">
+            <h2 id="Q2">Q.명상하면 뭐가 달라지나요?</h2>
+            <div class="ex-bx">
+              <p class="list">1. 스트레스를 낮춰줍니다.</p>
+              <p class="explain">자동적인 스트레스 반응을 되풀이하지 않음으로써 두려움과 불안을 완화하는 데 도움을 줍니다.</p>
+            </div>
+            <div class="ex-bx">
+                <p class="list">2. 불면증을 완화합니다.</p>
+                <p class="explain">명상은 부교감 신경을 활성화하고, 혈압과 심장박동, 산소 소비량을 낮추는 효과가 있습니다.</p>
+              </div>
+              <div class="ex-bx">
+                <p class="list">3. 나에 대한 이해가 깊어집니다.</p>
+                <p class="explain">되고 싶은, 혹은 되어야하는 ‘나’가 아닌 있는 그대로의 나를 발견할 수 있습니다.</p>
+              </div>
+              <div class="ex-bx">
+                <p class="list">4. 집중력과 기억력을 향상시킵니다.</p>
+                <p class="explain">명상은 본질적으로 주의 트레이닝입니다. 한 대상으로 다시금 주의를 옮겨오는 연습의 반복입니다. </p>
+              </div>
+              <div class="ex-bx">
+                <p class="list">5. 더 나은 관계를 만들 수 있습니다.</p>
+                <p class="explain">연민과 감사 연습으로 ‘나’가 중심에 서는 건강한 관계를 만들 수 있습니다.</p>
+              </div>
+         </div>
+        </div>
+    </div>
+
+    <div class="content-2">
+        <div class="info-2">
+            <p class="info2">명상 대신 <b>멍상하세요</b><br>
+                <span class="small">왈이의 마음단련장에서는 명상에서 획 하나 덜어내서 ‘멍상’이라고 불러요.</span></p>
+        </div>
+
+         <div id="ex2">
+            <div class="box4 col2">
+                <p class="first">쉽고<Br> 
+                                 체계적이니까</p>
+                <p class="ex2-ex">어려운 이야기를 쉽게 전하는 것이 왈이네의 사명이에요. 마음의 구성 요소부터 작동 방식까지 천천히, 체계적으로 안내합니다.</p>                 
+            </div>
+            <div class="box5 col2">
+                <p class="second">일상에 바로<br> 
+                    적용할 수 있으니까</p>
+                <p class="ex2-ex">커피 한 잔 할 때, 출퇴근길 걸을 때, 세탁소에 옷 찾으러 갈 때도 마음을 바라볼 수 있어요.</p>
+            </div>
+            <div class="box6 col2">
+                <p class="third">무엇보다 엉뚱하고<Br> 
+                    유쾌하니까!</p>
+                <p class="ex2-ex">변기통 멍상,바지 멍상은 왈이의 최애 멍상이에요. 명상이라고 해서 꼭 진지할 필요는 없잖아요.</p>    
+            </div>
+            <div class="box7 col2">
+                <img class="wal-i" src="https://i.postimg.cc/8kFV5B2m/6.png" width="249px">
+            </div>
+         </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-box1">
+            <a href="#">이용약관</a>
+            <a href="#">운영 및 환불정책</a>
+            <a href="#">개인정보 처리방침</a>
+        </div>
+        <p class="footer-content">
+            (주)왈 ㅣ 대표이사 노영은<br>
+            사업자 등록번호: 735-81-00992<br>
+            통신판매 신고번호:2018-서울종로-1426<br>
+            주소: 서울시 서대문구 성산로 11길 39
+        </p>
+        <p class="footer-content2">제휴 및 제안 문의: hello@wal.am</p>
+        </div>
+    
+    
+</body>
+</html>

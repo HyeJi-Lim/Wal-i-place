@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@300;400;500;700&family=Noto+Sans&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: #fbfbfb;
+        }
+
+        .navbar{
+            width:100%;
+            height:60px;
+            background-color: #5F7161;
+        }
+
+        #logo{
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left:120px;
+            float:left;
+        }
+
+        #menu{
+            list-style: none;
+            float:right;
+            margin:0;
+            padding-right:24px;
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: 400;
+            font-size: 20px;
+        }
+
+        #menu li{
+            float:left;
+        }
+
+        #menu li:nth-child(1){
+            margin-right:40px;
+        }
+
+        #menu li:nth-child(2){
+            margin-right:40px;
+        }
+
+        #menu li:nth-child(3){
+            margin-right:40px;
+        }
+
+        #menu li:nth-child(4){
+            margin-right:30px;
+        }
+
+        #menu li a{
+            line-height:60px;
+            text-decoration:none;
+            color: #EFEAD8;
+                }
+        
+        #menu li a:hover{
+            color:black;
+        }
+
+        .main-banner{
+            width:100%;
+            height:400px;
+            background-image: url('https://i.postimg.cc/J4xt8CS2/3.jpg');
+            background-size: cover;
+            background-position: right center;
+            padding-top:100px;
+        }
+
+        .navigation{
+            width:100%;
+            height:80px;
+            background-color: #5F7161;
+            text-align: center;
+        }
+
+        .navigation .menu2{
+            text-decoration: none;
+            line-height: 80px;
+            font-size: 24px;
+            color:#EFEAD8;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 300;
+        }
+
+        .navigation .menu2:hover{
+            font-weight: bold;
+        }
+
+        .navigation .menu2:not(:last-child)::after{
+            content:' ㅣ'
+         }
+
+        .footer{
+            width:100%;
+            height:288px;
+            background-color: #26272b;
+            padding-top: 40px;
+        }
+
+        #icon1{
+            width:44px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin-right:8px;
+        }
+
+        #icon2{
+            width:44px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            /* margin-right:24px; */
+        } 
+
+        .slogan{
+            width: 488px;
+            height: 178px;
+            margin-left: 120px;
+            padding-left:12px;
+        }
+
+        .slogan .icon3{
+            float:left;
+        }
+
+        .main-banner .slogan .title-1{
+            font-size: 32px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 300;
+            color:#626262;
+            text-align: left;
+            padding-top: 48px;
+        }
+
+        .main-banner .slogan .title-2{
+            font-size: 48px;
+            font-family: 'Hahmlet', serif;
+            font-weight: 500;
+            color:#303030;
+            text-align: left;
+        }
+        
+        .content-1{
+            width:100%;
+            height:830px;
+            margin-top: 80px;
+        }
+
+        .info{
+            width: 100%;
+            height:200px;
+            background-color: gray;
+            background-image: url('https://i.postimg.cc/vmgZ9tds/tree-g18f3c274f-1920.jpg') ;
+            background-blend-mode: multiply;
+            background-size: cover;
+            background-position: center center;
+            overflow: hidden;
+            padding-top: 24px;
+        }
+
+        .container{
+            width:996px;
+            height:550px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 80px;
+        }
+
+        .box-1{
+            float: left;
+            width:488px;
+            height:550px;
+            background-color: #CA8A8B;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+
+        .box-2{
+            float: left;
+            width: 508px;
+            height:550px;
+            background-color: #E2BCB7;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+
+        .content-2{
+            width:100%;
+            height:1300px;
+            background-color: #5B6D5B;
+            margin-top:50px;
+            padding-top: 30px;
+        }
+
+        .info h1{
+            font-size: 28px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 300;
+            text-align: left;
+            margin-left: 100px;
+            color:white;
+        }
+
+        .sub{
+            font-size: 16px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+            text-align: left;
+            margin-left: 100px;
+            margin-top: 8px;
+            background-color: rgba(255, 255, 255, 0.5);
+            width:204px;
+            padding: 2px;
+            color:white;
+        }
+
+        .box-in-1{
+            font-size: 14px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+            text-align: left;
+            color:gray;
+            margin-left: 20px;
+            margin-top: 80px;
+            width: 464px;
+            height: 88px;
+            border-bottom: 1px solid gray;
+            padding-left:10px;
+        }
+
+        .box-in-1 .main{
+            font-size: 20px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 700;
+            text-align: left;
+            color:rgb(85, 85, 85);
+        }
+
+        .box-in-1 .price{
+            font-size: 16px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+            text-align: left;
+            color:rgb(85, 85, 85);
+        }
+
+        .box-in-1 .standard{
+            font-size: 14px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 300;
+            text-align: left;
+        }
+
+        .box-in-2{
+            font-family: 'Noto Sans KR', sans-serif;
+            text-align: left;
+            color:rgb(85, 85, 85);
+            margin-left: 20px;
+            margin-top: 28px;
+            width: 464px;
+            height: 100px;
+            /* border-bottom: 1px solid gray; */
+            float: left;
+            padding-left:10px;
+        }
+
+        .box-in-2:not(:last-child){
+            border-bottom: 1px solid gray;
+        }
+
+        .title{
+            font-family: 'Noto Sans KR', sans-serif;
+            float: left;
+            font-size: 20px;
+            font-weight: 700;
+            margin-right: 54px;
+        }
+
+        .sub-ex{
+            font-family: 'Noto Sans KR', sans-serif;
+            float: left;
+        }
+
+        .img-1{
+            margin-top: 36px;
+        }
+
+        .icon2{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .coment-1{
+            font-size:40px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+            text-align: center;
+            margin-top: 40px;
+            color:rgb(255, 255, 255)
+        }
+
+        .coment-small{
+            font-size: 32px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+            color:rgba(255, 255, 255, 0.607);
+        }
+
+        .line{
+            width: 3px;
+            height: 100px;
+            background-color: rgba(255, 255, 255, 0.815);
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 32px;
+            margin-bottom: 32px;
+        }
+
+        .coment-2{
+            font-size:40px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+            text-align: center;
+            color:white;
+        }
+
+        .content-3{
+            width:350px;
+            height: 90px;
+            margin-left: auto;
+            margin-right: auto;
+            background-image: url('https://i.postimg.cc/pLDPJ8QF/image.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-top: 20px;
+            color:gray;
+        }
+
+        .coment-3{
+            font-size:24px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        .content-4{
+            width: 718px;
+            height: 310px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 84px;
+        }
+
+        .box1{
+            width: 222px;
+            height: 310px;
+            float: left;
+        }
+
+        .circle{
+            width:214px;
+            height: 214px;
+            border-radius: 50%;
+            background-color: white;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        }
+
+        .line2{
+            width:146px;
+            height: 2px;
+            background-color: #e47851;
+            margin-top: 16px;
+            margin-left: 34px;
+            margin-bottom: 16px;
+        }
+
+        .number{
+            font-size: 20px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 700;
+            float: left;
+            color:#e47851;
+        }
+
+        .box1-ex{
+            text-align: center;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+            color:rgba(255, 255, 255, 0.775);
+        }
+
+        .box1:not(:last-child){
+            margin-right: 26px;
+        }
+
+        .last{
+            font-size: 24px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 700;
+            text-align: center;
+            background-color: #e47851;
+            width: 356px;
+            height: 70px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 64px;
+            border-radius: 40px;
+            padding-top: 16px;
+        }
+
+        .last:hover{
+            background-color: white;
+            color:#e47851;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        a{
+            text-decoration: none;
+            color:white;
+        }
+
+        .circle-1{
+            overflow: hidden;
+            margin-top: 10px;
+            margin-left: 16px;
+        }
+
+        .footer-box1{
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .footer-box1 a{
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 700;
+            text-decoration: none;
+            color:white;
+            font-size: 16px;
+        }
+
+        .footer-box1 a:not(:last-child)::after{
+            content:' ㅣ'
+        }
+
+        .footer-content{
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+            text-align: center;
+            color:rgb(214, 214, 214);
+            font-size: 14px;
+            line-height: 30px;
+        }
+
+        .footer-content2{
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+            text-align: center;
+            color:rgb(214, 214, 214);
+            font-size: 14px;
+            margin-top: 48px;
+        }
+
+        @media(min-width:573px) and (max-width:768px){
+            #menu{
+                font-size:15px;
+            }
+
+            #menu li:nth-child(1){
+            margin-right:20px;
+            }
+
+            #menu li:nth-child(2){
+            margin-right:20px;
+            }
+
+            #menu li:nth-child(3){
+            margin-right:20px;
+            }
+
+            #menu li:nth-child(4){
+            margin-right:15px;
+            }
+
+            #icon1{
+                width:28px;
+                margin-top: 8px;
+            }
+
+            #icon2{
+                width:28px;
+                margin-top: 8px;
+            }
+
+            #logo img{
+                width:187px;
+            }
+
+            #logo{
+                padding-left: 40px;
+                padding-top: 12px;
+            }
+
+            .navigation .menu2{
+                font-size:16px;
+            }
+
+            .slogan{
+            width: 400px;
+            height: 140px;
+            margin-left: 60px;
+            padding-left:6px;
+            }
+            
+            .main-banner .slogan .title-1{
+            font-size: 24px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 300;
+            color:#626262;
+            text-align: left;
+            padding-top: 48px;
+            }
+
+            .main-banner .slogan .title-2{
+            font-size: 32px;
+            font-family: 'Hahmlet', serif;
+            font-weight: 500;
+            color:#303030;
+            text-align: left;
+            }
+
+            .icon3{
+                width: 32px;
+            }
+
+            .main-banner{
+            width:100%;
+            height:400px;
+            background-image: url('https://i.postimg.cc/J4xt8CS2/3.jpg');
+            background-size: cover;
+            background-position: center;
+            padding-top:100px;
+            }
+
+           .container{
+            width:508px;
+            height:1100px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 80px;
+            }
+
+            .content-2{
+            width:100%;
+            height:1300px;
+            background-color: #5B6D5B;
+            margin-top:700px;
+            padding-top: 30px;
+        }
+
+        .box-1{
+            float: left;
+            width:508px;
+            height:550px;
+            background-color: #CA8A8B;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+            
+        }
+
+
+        </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a id="logo" href="#">
+            <img src="https://i.postimg.cc/VkGycthK/image.png" alt="logo" width="237px">
+    </a>
+
+        <ul id="menu">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">APP</a></li>
+            <li><a href="#">LOGIN</a></li>
+            <li><a href="#">MY PAGE</a></li>
+            <li><a href="#"><img id="icon1" src="https://i.postimg.cc/TwYKsHtH/1-b.png" alt="icon1" width="44px"></a></li>
+            <li><a href="#"><img id="icon2" src="https://i.postimg.cc/YC6jCwVs/2-b.png" alt="icon1" width="44px"></a></li>
+        </ul>
+
+    </div>
+
+    <div class="main-banner">
+        <div class="slogan">
+        <img class="icon3" src="https://i.postimg.cc/1ty52WJQ/image.png" width="48px">
+        <p class="title-1">나다운 일상을 위한 멍상</p>
+        <p class="title-2">왈이의 마음단련장</p>
+    </div>
+</div>
+
+    <div class="navigation">
+        <a class="menu2" href="index.html">소개&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a class="menu2" href="Lecture.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;강좌&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a class="menu2" href="Music.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;명상음악&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a class="menu2" href="Membership.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>멤버십</b></a>
+    </div>
+
+    <div class="content-1">
+        <div class="info">
+            <h1>라이브의 깊은 몰입감,<br>
+                함께 나누는 즐거움<br>
+                <b>라이브 멤버십</b></h1>
+                  <p class="sub">아침, 저녁 라이브로 함께 멍상</p>
+        </div>
+        <div class="container">
+            <div class="box-1">
+                <img class="img-1" src="https://i.postimg.cc/dQm1925K/7.png" width="488px">
+            </div>
+
+            <div class="box-2">
+                <p class="box-in-1">
+                    아침 저녁 라이브로 함께 멍상<br>
+                    <span class="main">라이브 멤버십</span><br>
+                    <span class="price">월 49,000원~</span> <span class="standard">(주 2회 기준)</span>
+                </p>
+                <div class="box-in-2">
+                    <p class="title">구성</p>
+                    <p class="sub-ex">매일 다른 주제의 <b>라이브 멍상 클래스</b><Br>
+                        언제든 멍상할 수 있도록 돕는 <b>셀프 클래스룸</b><Br>
+                        효과적인 마음 단련을 위한 <b>멍키트</b></p>
+                    </div>
+                <div class="box-in-2">
+                    <p class="title">추천</p>
+                    <p class="sub-ex"><b>효과적으로 루틴</b>을 만들고자 하는 분<br>
+                        혼자보다는 <b>함께하는 즐거움</b>을 느끼고 싶은 분<br>
+                        <b>실시간</b>으로 좀 더 깊은 몰입감을 경험하고 싶은 분</p>
+                    </div>
+                <div class="box-in-2">
+                    <p class="title">기간</p>
+                    <p class="sub-ex">4주</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-2">
+        <img class="icon2" src="https://i.postimg.cc/1zYQBKdJ/3.png" width="48px">
+        <p class="coment-1"><b>나 요즘 어떻게 살아가고 있지?</b><br>
+                            <span class="coment-small">바쁜 매일을 사느라 정작 나를 잊고 있다면<br>멍상으로 소중한 나를 만나보세요.</span></p>
+        <div class="line"></div>
+        <p class="coment-2">주중 <b>아침 8시, 밤 10시<br>30분</b> 라이브 멍상으로</p>
+        <div class="content-3">
+            <p class="coment-3">나다운 일상을 되찾아요</p>
+        </div>
+        <div class="content-4">
+            <div class="box1">
+                <div class="circle">
+                    <img class="circle-1" src="https://i.postimg.cc/d0sBwhFy/a.png" width="190px" height="190px">
+                </div>
+                <p class="number">01</p>
+                <div class="line2"></div>
+                <p class="box1-ex">라이브로 매일<br>다른 <b>멍상을 함께하고</b></p>
+            </div>
+            <div class="box1">
+                <div class="circle">
+                    <img class="circle-1" src="https://i.postimg.cc/zBM6yCDM/b.png" width="190px" height="190px">
+                </div>
+                <p class="number">02</p>
+                <div class="line2"></div>
+                <p class="box1-ex">내 마음 <b>상태를 <br>기록</b>하고</p>
+            </div>
+            <div class="box1">
+                <div class="circle">
+                    <img class="circle-1" src="https://i.postimg.cc/nr42nBXq/c.png" width="190px" height="190px">
+                </div>
+                <p class="number">03</p>
+                <div class="line2"></div>
+                <p class="box1-ex">서로 멍상하며<br><b>알아차린 것을 나눠요.</b></p>
+            </div>
+        </div>
+        <a href="#">
+          <p class="last">라이브 멤버십 구독하기</p>
+        </a>
+        </div>
+    </div>
+        
+
+    <div class="footer">
+        <div class="footer-box1">
+        <a href="#">이용약관</a>
+        <a href="#">운영 및 환불정책</a>
+        <a href="#">개인정보 처리방침</a>
+    </div>
+    <p class="footer-content">
+        (주)왈 ㅣ 대표이사 노영은<br>
+        사업자 등록번호: 735-81-00992<br>
+        통신판매 신고번호:2018-서울종로-1426<br>
+        주소: 서울시 서대문구 성산로 11길 39
+    </p>
+    <p class="footer-content2">제휴 및 제안 문의: hello@wal.am</p>
+    </div>
+    
+    
+</body>
+</html
